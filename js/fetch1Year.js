@@ -1,7 +1,6 @@
-const { error } = require("console");
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
 require("dotenv").config();
-
+dotenv.config({ path: path.join(__dirname, "../.env") })
 
 //  ---------- Function Format Date ----------
 
@@ -31,6 +30,7 @@ TDdate.setDate(TDdate.getDate() + 32);
 // ---------- API Key && Container ----------
 
 const clientID = process.env.Apikey1;
+console.log(clientID);
 const rawData = []
 
 //  ---------- END ----------
