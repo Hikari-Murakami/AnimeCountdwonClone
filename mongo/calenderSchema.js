@@ -49,7 +49,7 @@ function filterFirstEncounter(data) {
     const arrayOfIds = data.map((anime) => anime.ids.simkl_id)
 
 
-    const firstEncounterAnimes = raw.filter((anime, index) => {
+    const firstEncounterAnimes = data.filter((anime, index) => {
       return arrayOfIds.indexOf(anime.ids.simkl_id) == index
     })
     return firstEncounterAnimes
@@ -94,7 +94,7 @@ function getUpCommingV2(raw, type) {
 // Static Method to git instance Airing 
 Calender_Schema.statics.Airing = async function Airing() {
   try {
-    const reawD = await this.find({ date: { $gte: new Date() } })
+    const reawD = await this.find({ date: { $gte: new Date() } }).limit(5)
     return filterFirstEncounter(reawD)
   } catch (error) {
     console.log(error)
