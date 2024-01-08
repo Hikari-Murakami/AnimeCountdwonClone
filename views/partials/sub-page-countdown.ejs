@@ -1,0 +1,27 @@
+<a href=""  style="background-image: url('https://wsrv.nl/?url=https://simkl.in/posters/<%=anime.poster%>_m.jpg');">
+                <div class="countdownBox">
+                  <div class="CD_Details">
+                    <h1 class="CD_Details-Title"><%= anime.title %></h1>
+                      <!-- <% console.log(anime.title)%> -->
+                    <h3 class="CD_Details-Episode">Episode-<%= anime.episode.episode  %></h3>
+                    <div class="CD_Details-Time">
+                      <div class="CD_Time">
+                        <div class="CD_Time-Number"><%= date.days %></div>
+                        <div class="CD_Time-Text">DAYS</div> 
+                      </div>
+                      <div class="CD_Time">
+                        <div class="CD_Time-Number"><%=date.hours %></div>
+                        <div class="CD_Time-Text">HOURS</div>
+                      </div>
+                      <div class="CD_Time">
+                        <div class="CD_Time-Number"><%= date.minutes %></div>
+                        <div class="CD_Time-Text">MINS</div>
+                      </div>
+                      <div class="CD_Time">
+                        <div class="CD_Time-Number"><%= date.seconds  %></div>
+                        <div class="CD_Time-Text">SECS</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
